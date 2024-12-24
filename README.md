@@ -29,7 +29,9 @@ When you enable this flag, it automatically activates the following fflags:
 # MTU FFLAGS
 ---
 ### Let's start with what does mtu mean?
-## Mtu = maximum transmission unit  (Packets)(Roblox default mtu size is 1396)
+## Mtu = maximum transmission unit  (Packets)
+
+(Roblox default mtu size is 1396)
 ### Whats optimal mtu for me?
 > [!TIP]
 > **Identify the Current MTU**

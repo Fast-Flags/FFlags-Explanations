@@ -56,3 +56,13 @@ When you enable this flag, it automatically activates the following fflags:
 }
 ```
 ---
+# Dynamic Resolution Scale
+## What does dynamic Resolution Scale mean?
+> - The Dynamic Resolution feature helps developers maintain their application’s frame rate while rendering at an optimal resolution. Dynamic Resolution automatically adjusts the resolution during heavy GPU work and increases image quality when possible.
+### How to enable dynamic Resolution Scale in roblox?
+```json
+{
+    "FFlagRenderDynamicResolutionScale7": "true"
+}
+```
+> - ## Default value (false)

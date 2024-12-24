@@ -47,7 +47,10 @@ When you enable this flag, it automatically activates the following fflags:
 >   ping -s 1472 -M do roblox.com
 >   ```
 > - Start with a packet size of 1472 bytes, then reduce by 10-12 bytes if needed until you find the largest size that doesn't fragment. Add 28 bytes to this number to get the optimal MTU.
+
+```json
 {
     "DFIntConnectionMTUSize": "MTU_HERE"
 }
-> 
+```
+---

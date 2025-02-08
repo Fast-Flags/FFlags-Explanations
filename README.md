@@ -27,26 +27,33 @@ When you enable this flag, it automatically activates the following fflags:
 ```
 ---
 # MTU FFLAGS
----
+
 ## What is MTU?
 MTU (Maximum Transmission Unit) is the maximum size of a data packet that can be transmitted over a network without fragmentation.
 
 Simply put, it's the limit on how large a single chunk of data can be when sent over the internet or a local network. If a packet exceeds the MTU, it gets split into smaller pieces, which can slow down transmission.
-👉 Roblox's default MTU size is 1396 bytes(1396)
 
-# You can find the optimal MTU using a **ping test**:
+👉 Roblox's default MTU size is **1396 bytes**.
 
-- Windows:
-- roblox.com -f -l (1472 - mtu size)
-- Start with **1472 bytes** and decrease by **10-12 bytes** if needed until you find the largest value that doesn't cause fragmentation.
-- Once found, add **28 bytes** to this value to get the **optimal MTU**.
+## How to find the optimal MTU using a **ping test**?
 
+### Windows:
+1. Open the command prompt (**cmd**)
+2. Enter the command:
+   ```sh
+   ping roblox.com -f -l [MTU size]
+   ```
+3. Start with **1472 bytes** and decrease the value by **10-12 bytes** until you find the largest value that does not cause fragmentation.
+4. Once found, **add 28 bytes** to this value to get the **optimal MTU**.
+
+### Example of setting MTU in Roblox:
 ```json
 {
     "DFIntConnectionMTUSize": "MTU_HERE"
 }
 ```
-## How to Increase MTU Beyond 1472 Without Issues?
+
+## How to increase MTU beyond 1472 without issues?
 To allow higher MTU values without problems, add the following FFlag:
 ```json
 {

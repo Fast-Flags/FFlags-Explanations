@@ -9,7 +9,7 @@
 
 ## How to enable Decomposition Detection (DCD)?
 
-To enable DCD, use the following FFlag:
+##### To enable DCD, use the following FFlag:
 
 ```json
 {
@@ -50,7 +50,6 @@ To enable DCD, use the following FFlag:
     "DFIntConnectionMTUSize": "MTU_HERE"
 }
 ```
-
 ## How to increase MTU beyond 1472 without issues?
 ##### To allow higher MTU values without problems, add the following FFlag:
 ```json

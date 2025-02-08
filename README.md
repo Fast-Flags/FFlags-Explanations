@@ -3,7 +3,7 @@
 ---
 ### What does `FFlagSimEnableDCD16` do and what does it enable?
 
-**DCD** stands for **Decomposition Detection**. It is a feature that helps detect and optimize complex objects, particularly in games, by analyzing their structure and simplifying them for better performance.
+**DCD** stands for **Decomposition Detection**.
 
 ---
 

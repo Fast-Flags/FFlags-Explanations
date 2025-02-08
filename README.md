@@ -29,11 +29,11 @@ When you enable this flag, it automatically activates the following fflags:
 # MTU FFLAGS
 
 ## What is MTU?
-## - MTU (Maximum Transmission Unit) is the maximum size of a data packet that can be transmitted over a network without fragmentation.
+### - MTU (Maximum Transmission Unit) is the maximum size of a data packet that can be transmitted over a network without fragmentation.
 
-## - Simply put, it's the limit on how large a single chunk of data can be when sent over the internet or a local network. If a packet exceeds the MTU, it gets split into smaller pieces, which can slow down transmission.
+### - Simply put, it's the limit on how large a single chunk of data can be when sent over the internet or a local network. If a packet exceeds the MTU, it gets split into smaller pieces, which can slow down transmission.
 
-## - 👉 Roblox's default MTU size is **1396 bytes**.
+### - 👉 Roblox's default MTU size is **1396 bytes**.
 
 ## How to find the optimal MTU using a **ping test**?
 

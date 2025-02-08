@@ -28,31 +28,29 @@ When you enable this flag, it automatically activates the following fflags:
 ---
 # MTU FFLAGS
 ---
-### Let's start with what does mtu mean?
-## Mtu = maximum transmission unit  (Packets)
+## What is MTU?
+MTU (Maximum Transmission Unit) is the maximum size of a data packet that can be transmitted over a network without fragmentation.
 
-(Roblox default mtu size is 1396)
-### Whats optimal mtu for me?
-> [!TIP]
-> **Identify the Current MTU**
-> - **Windows**: Open Command Prompt and type `netsh interface ipv4 show subinterfaces`.
-> - **Linux**: Use `ifconfig` or `ip link show` to find the current MTU of your network interface.
-> [!TIP]
-> **Determine the Optimal MTU**
-> - **Ping Test**: Use the `ping` command with the `-f` flag (to avoid fragmentation) and the `-l` (or `-s` on Linux) flag to set the packet size.
-> - **Example for Windows**:
->   ```bash
->   ping roblox.com -f -l 1472
->   ```
-> - **Example for Linux**:
->   ```bash
->   ping -s 1472 -M do roblox.com
->   ```
-> - Start with a packet size of 1472 bytes, then reduce by 10-12 bytes if needed until you find the largest size that doesn't fragment. Add 28 bytes to this number to get the optimal MTU.
+Simply put, it's the limit on how large a single chunk of data can be when sent over the internet or a local network. If a packet exceeds the MTU, it gets split into smaller pieces, which can slow down transmission.
+👉 Roblox's default MTU size is 1396 bytes(1396)
+
+# You can find the optimal MTU using a **ping test**:
+
+- Windows:
+- roblox.com -f -l (1472 - mtu size)
+- Start with **1472 bytes** and decrease by **10-12 bytes** if needed until you find the largest value that doesn't cause fragmentation.
+- Once found, add **28 bytes** to this value to get the **optimal MTU**.
 
 ```json
 {
     "DFIntConnectionMTUSize": "MTU_HERE"
+}
+```
+## How to Increase MTU Beyond 1472 Without Issues?
+To allow higher MTU values without problems, add the following FFlag:
+```json
+{
+    "DFFlagRakNetMtuPing": "True"
 }
 ```
 ---
@@ -62,7 +60,7 @@ When you enable this flag, it automatically activates the following fflags:
 ### How to enable dynamic Resolution Scale in roblox?
 ```json
 {
-    "FFlagRenderDynamicResolutionScale7": "true"
+    "FFlagRenderDynamicResolutionScale11": "true"
 }
 ```
 > - ## Default value (false)

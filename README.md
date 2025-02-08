@@ -37,14 +37,14 @@ When you enable this flag, it automatically activates the following fflags:
 
 ## How to find the optimal MTU using a **ping test**?
 
-### Windows:
-1. Open the command prompt (**cmd**)
-2. Enter the command:
+## Windows:
+### 1. Open the command prompt (**cmd**)
+### 2. Enter the command:
    ```sh
    ping roblox.com -f -l [MTU size]
    ```
-3. Start with **1472 bytes** and decrease the value by **10-12 bytes** until you find the largest value that does not cause fragmentation.
-4. Once found, **add 28 bytes** to this value to get the **optimal MTU**.
+### 3. Start with **1472 bytes** and decrease the value by **10-12 bytes** until you find the largest value that does not cause fragmentation.
+### 4. Once found, **add 28 bytes** to this value to get the **optimal MTU**.
 
 ### Example of setting MTU in Roblox:
 ```json

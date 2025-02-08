@@ -67,3 +67,16 @@
     "FFlagRenderDynamicResolutionScale11": "true"
 }
 ```
+--- 
+# How to increase data receive from raknet?
+##### FFlag ClientRecvFromRaknet can do this
+```json
+{
+    "DFIntClientRecvFromRaknet": "255"
+}
+```
+- ##### Max value 255
+- ##### Min value 0
+- ##### Default 0
+
+

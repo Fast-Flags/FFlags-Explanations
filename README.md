@@ -64,7 +64,7 @@
 ### How to enable dynamic Resolution Scale in roblox?
 ```json
 {
-    "FFlagRenderDynamicResolutionScale11": "true"
+    "FFlagRenderDynamicResolutionScale12": "true"
 }
 ```
 --- 
@@ -78,5 +78,20 @@
 - ##### Max value 255
 - ##### Min value 0
 - ##### Default 0
-
-
+--- 
+# How to make clicks faster and imput latency better
+##### FFlag FIntCLI20390_2:
+#### Explanation: 
+##### Makes faster data entry interval 
+```json
+{
+    "FIntCLI20390_2": "16"
+}
+```
+- ##### Default 16
+- Lower value than 16 makes better input latency example:
+```json
+{
+    "FIntCLI20390_2": "0"
+}
+```

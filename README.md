@@ -109,7 +109,7 @@ Use the following FFlag to adjust:
 
 ### What does `FIntCLI20390_2` do?
 
-This flag speeds up the data input interval, resulting in improved input latency.
+#### CLI is short for client; this flag in particular allows you to adjust mouse input queues or its debounce time as Id like to interpret it, measured in milliseconds between clicks before the next input is registered. Its defaulted to 16ms for stability to prevent accidental double clicking. This only seems useful if you use your mouse in spam based scenarios such as blade ball for example. As mentioned before its measured in milliseconds so experimenting with higher values say 10000ms (10 seconds) will delay your next input by that specified amount of time 
 
 #### Example Configuration:
 

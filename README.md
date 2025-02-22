@@ -30,7 +30,7 @@ To enable DCD, set the following flag:
   "FFlagSimEnableDCD16": "true"
 }
 ```
-
+### THIS IS ENABLED BY DEFAULT NOW AND THIS FFLAG IS DELETED
 ---
 
 ## MTU FFLAGS

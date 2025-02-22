@@ -113,8 +113,8 @@ Use the following FFlag to adjust:
 
 #### Example Configuration:
 
-- **Default value:** 16  
-- For better input latency, set a value lower than 16, for example:
+- **Default value:** 16
+- Example:
 
 ```json
 {

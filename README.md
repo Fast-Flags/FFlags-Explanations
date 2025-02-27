@@ -1,13 +1,12 @@
---- 
 # FFLAGS for Roblox
 
-This document explains the purpose and usage of various FFLAGS.
+This document explains the purpose and usage of various FFLAGS categorized by functionality.
 
 ---
 
-## DCD FFLAGS
+# Decomposition Detection (DCD) FFLAGS
 
-### What does `FFlagSimEnableDCD16` do?
+### What is `FFlagSimEnableDCD16`?
 
 **DCD** stands for **Decomposition Detection**.
 
@@ -21,7 +20,7 @@ Enabling this flag automatically activates the following settings:
 }
 ```
 
-### How to enable DCD?
+### How to Enable DCD?
 
 To enable DCD, set the following flag:
 
@@ -30,20 +29,22 @@ To enable DCD, set the following flag:
   "FFlagSimEnableDCD16": "true"
 }
 ```
-### THIS IS ENABLED BY DEFAULT NOW AND THIS FFLAG IS DELETED
+
+### **Note:** This flag is now enabled by default and has been removed.
+
 ---
 
-## MTU FFLAGS
+# MTU (Maximum Transmission Unit) FFLAGS
 
 ### What is MTU?
 
-- **MTU (Maximum Transmission Unit)** is the maximum size of a data packet that can be transmitted over a network without fragmentation.
-- Simply put, it limits the size of a single data chunk sent over the internet or a local network. If a packet exceeds the MTU, it gets split into smaller pieces, potentially slowing down transmission.
+- **MTU** is the maximum size of a data packet that can be transmitted over a network without fragmentation.
+- If a packet exceeds the MTU, it gets split into smaller pieces, potentially slowing down transmission.
 - **Roblox's default MTU size is 1396 bytes.**
 
-### How to find the optimal MTU using a **ping test**?
+### How to Find the Optimal MTU?
 
-1. **Open the command prompt** (cmd).
+1. **Open Command Prompt** (cmd).
 2. **Run the following command:**
    ```sh
    ping roblox.com -f -l [MTU size]
@@ -51,7 +52,7 @@ To enable DCD, set the following flag:
 3. **Start with 1472 bytes** and decrease the value by **10-12 bytes** until you find the largest value that does not cause fragmentation.
 4. **Add 28 bytes** to this value to get the **optimal MTU**.
 
-### Example of setting MTU in Roblox:
+### Setting MTU in Roblox
 
 ```json
 {
@@ -59,25 +60,23 @@ To enable DCD, set the following flag:
 }
 ```
 
-### How to increase MTU beyond 1472 without issues?
-
-To allow higher MTU values without problems, add the following FFlag:
+### Increasing MTU Beyond 1472 Without Issues
 
 ```json
 {
-  "DFFlagRakNetMtuPing": "True"
+  "DFFlagRakNetMtuPing": "true"
 }
 ```
 
 ---
 
-## Dynamic Resolution Scale
+# Dynamic Resolution Scaling FFLAGS
 
-### What is Dynamic Resolution Scale?
+### What is Dynamic Resolution Scaling?
 
-Dynamic Resolution Scale helps developers maintain the application's frame rate by automatically adjusting the resolution during heavy GPU load and enhancing image quality when possible.
+This feature helps maintain the game's frame rate by automatically adjusting resolution based on GPU load.
 
-### How to enable Dynamic Resolution Scale in Roblox?
+### Enabling Dynamic Resolution Scaling
 
 ```json
 {
@@ -89,9 +88,7 @@ Dynamic Resolution Scale helps developers maintain the application's frame rate 
 
 ## Increasing Data Receive from RakNet
 
-### How to increase the data received from RakNet?
-
-Use the following FFlag to adjust:
+### Adjusting RakNet Data Reception
 
 ```json
 {
@@ -99,22 +96,22 @@ Use the following FFlag to adjust:
 }
 ```
 
-- **Maximum value:** 255  
-- **Minimum value:** 0  
-- **Default value:** 0
+- **Maximum Value:** 255  
+- **Minimum Value:** 0  
+- **Default Value:** 0  
 
 ---
 
-## Optimizing Clicks and Reducing Input Latency
+# Optimizing Clicks & Reducing Input Latency
 
-### What does `FIntCLI20390_2` do?
+### What is `FIntCLI20390_2`?
 
-#### CLI is short for client; this flag in particular allows you to adjust mouse input queues or its debounce time as Id like to interpret it, measured in milliseconds between clicks before the next input is registered. Its defaulted to 16ms for stability to prevent accidental double clicking. This only seems useful if you use your mouse in spam based scenarios such as blade ball for example. As mentioned before its measured in milliseconds so experimenting with higher values say 10000ms (10 seconds) will delay your next input by that specified amount of time 
+- **CLI** stands for **Client**. This flag adjusts mouse input queues or debounce time (measured in milliseconds between clicks before the next input is registered).
+- Default is **16ms** to prevent accidental double clicks.
+- Useful for spam-clicking scenarios (e.g., [Blade Ball](https://www.roblox.com/games/13772394625/Blade-Ball)).
+- Example: Setting **10000ms (10 seconds)** delays input for that time.
 
-#### Example Configuration:
-
-- **Default value:** 16
-- Example:
+### Example Configuration
 
 ```json
 {
@@ -123,3 +120,52 @@ Use the following FFlag to adjust:
 ```
 
 ---
+
+## RakNet Enable Polling
+
+### Enabling Polling in RakNet
+
+```json
+{
+  "DFFlagRakNetEnablePoll": "true"
+}
+```
+
+### Purpose
+
+- Enables polling in **Roblox's RakNet** networking library.
+- Allows frequent checks for incoming/outgoing packets.
+
+### Benefits
+
+- **Improves networking responsiveness** and reduces latency.
+- **May increase CPU usage** due to continuous polling.
+
+---
+
+# Memory Utility (Affects Memory Usage in Roblox)
+
+### Configurable Memory Utility Flags
+
+#### **`DFIntMemoryUtilityCurveBaseHundrethsPercent`**
+- Defines base percentage for memory utility curve (hundredths of a percent).
+- Higher values (e.g., **10000 or 100%**) assume full memory utilization.
+
+#### **`DFIntMemoryUtilityCurveNumSegments`**
+- Determines the number of segments in memory utility calculations.
+- More segments increase accuracy but may slightly impact performance.
+
+#### **`DFIntMemoryUtilityCurveTotalMemoryReserve`**
+- Specifies total memory reserve for utility calculations.
+- **0 means no extra memory is reserved**.
+
+### Example Configuration
+
+```json
+{
+  "DFIntMemoryUtilityCurveBaseHundrethsPercent": "10000",
+  "DFIntMemoryUtilityCurveNumSegments": "100",
+  "DFIntMemoryUtilityCurveTotalMemoryReserve": "0"
+}
+```
+

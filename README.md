@@ -150,6 +150,14 @@ This document explains the purpose and usage of various FFLAGS categorized by fu
 
 - **Default Value:** 15  
 ## Some players refer to this FFlag as "Fast Dash" in [**The Strongest Battlegrounds**](https://www.roblox.com/games/10449761463/The-Strongest-Battlegrounds), but this is incorrect. This is not a "**faster dash**" or any kind of exploit. Instead, this FFlag enhances synchronization with the server.  
+---
+# Dynamic Render KiloPixels(Related to dynamic res scale):
+```json
+{
+"DFIntDebugDynamicRenderKiloPixels":"2"
+}
+```
+### How does its work:
 
-For example, if your usual ping is **50-70 ms**, enabling this setting improves synchronization, making **anti-shove** behave as if your connection had a server-side latency of **35-45 ms**.  
+- A lower value of `DFIntDebugDynamicRenderKiloPixels` decreases the number of kilopixels, resulting in a lower resolution and a more pixelated image.
 ---

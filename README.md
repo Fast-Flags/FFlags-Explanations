@@ -167,11 +167,6 @@ This document explains the purpose and usage of various FFLAGS categorized by fu
 }
 ```
 ---
-# FFLAGS for Roblox
-
-This document explains the purpose and usage of various FFLAGS categorized by functionality.
-
----
 
 # PhysicSenderRate FFlag
 ```json

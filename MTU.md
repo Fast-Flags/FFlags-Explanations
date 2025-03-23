@@ -1,4 +1,3 @@
----
 # MTU (Maximum Transmission Unit) FFLAGS
 
 #### What is MTU?
@@ -32,5 +31,3 @@
   "DFFlagRakNetMtuPing": "true"
 }
 ```
-
----

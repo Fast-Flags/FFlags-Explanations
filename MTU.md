@@ -24,7 +24,7 @@
 }
 ```
 
-#### Increasing MTU Beyond 1472 Without Issues:
+#### Increasing MTU Beyond 1472 Without Issues(IF SUPPORTED):
 
 ```json
 {

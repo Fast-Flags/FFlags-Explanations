@@ -31,3 +31,10 @@
 
 - **Improves networking responsiveness** and reduces latency.
 - **May increase CPU usage** due to continuous polling.
+---
+#### Using RakNet with MTU (Allows increasing the value above 1472):
+```json
+{
+  "DFFlagRakNetMtuPing": "true"
+}
+```

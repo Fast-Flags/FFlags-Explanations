@@ -24,7 +24,7 @@
 }
 ```
 
-#### Increasing MTU Beyond 1472 Without Issues(IF SUPPORTED):
+#### Using RakNet with MTU (Allows increasing the value above 1472):
 
 ```json
 {

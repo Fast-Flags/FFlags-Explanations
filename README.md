@@ -11,8 +11,6 @@
 # 6. [Sender Rate ](https://github.com/Fast-Flags/FFlags-Explanations/blob/main/Sender%20Rate.md) FFlag Explanation
 
  #### By the way, many FFlag explanations were found on various Discord servers from people who are knowledgeable about FastFlags and test them before sharing information:
+- ## [Bloxstrap](https://discord.com/invite/nKjV3mGq6R)
 - ## [Flag Forge](https://discord.gg/ApEUrRArKU)
 - ## [Stoof’s Basement](https://discord.gg/jq2PftPUhU)
-- ## Useful Bloxstrap FF's
-- ## Fishstrap
-- ## Bloxstrap

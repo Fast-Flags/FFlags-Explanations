@@ -16,7 +16,8 @@ INFO: Rendering API
 ```
 ### Vulkan
 > [!CAUTION]
-> **Visual Bugs & Crashes**
+> **Visual bugs & crashes occur only in exclusive fullscreen.**
+> **Fullscreen mode may cause crashes and does not support OBS Studio.**
 ```json
 {
     "FFlagDebugGraphicsPreferD3D11": "false",
@@ -27,6 +28,8 @@ INFO: Rendering API
 }
 ```
 ### OpenGL
+> [!IMPORTANT]
+> - #### (More FPS on older devices do not support `future/unified` lighting.)
 ```json
 {
     "FFlagDebugGraphicsPreferD3D11": "false",
@@ -37,6 +40,8 @@ INFO: Rendering API
 }
 ```
 ### Direct X 10
+> [!IMPORTANT]
+> - #### (More FPS on older devices do not support `future/unified` lighting.)
 ```json
 {
     "FFlagDebugGraphicsPreferD3D11": "false",
@@ -47,6 +52,9 @@ INFO: Rendering API
 }
 ```
 ### Direct X 11
+##### [DEFAULT API ENGINE WITH ALL FEATURES]
+> [!IMPORTANT]
+> - #### (More FPS on newest pc's)
 ```json
 {
     "FFlagDebugGraphicsPreferD3D11": "True",

@@ -8,7 +8,7 @@
 - **Higher values** lead to overcorrections, causing animations to freeze or teleport without smooth motion.  
 - A setting of **100** works well with `DFIntMaxFrameBufferSize` set to **1-3**, as it improves AI awareness per keyframe.  
 
-### Example Configuration:  
+### Json:
 
 ```json
 {

@@ -11,8 +11,7 @@
 - **1-3** → Harder to smooth out but reduces rendering load, often causing visible stuttering.  
 - Lower values are generally preferred for responsiveness, but they require additional flags to compensate for stutter.  
 
-### Example Configuration  
-
+### Json:
 ```json
 {
   "DFIntMaxFrameBufferSize": "10"

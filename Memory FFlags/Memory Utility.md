@@ -14,7 +14,7 @@
 -  Specifies total memory reserve for utility calculations.
 -  **0 means no extra memory is reserved**.
 
-### Example Json:
+### Json:
 ```json
 {
   "DFIntMemoryUtilityCurveBaseHundrethsPercent": "10000",

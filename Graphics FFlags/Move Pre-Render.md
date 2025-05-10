@@ -24,7 +24,7 @@ Enabling this flag increased my framerate from **80 FPS to 100 FPS** in **Pls Do
   * Neighbors
   * On Tap 17+
   * Pinewood Computer Core
-  * 
+
 # Move Prerender V2
 This flag has been forced to **True**, meaning it will be enabled for everyone.
 It's an additional optimization to the original `Move Prerender`.

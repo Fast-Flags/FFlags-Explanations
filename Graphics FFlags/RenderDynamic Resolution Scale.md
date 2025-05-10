@@ -21,6 +21,18 @@
 "DFIntDebugDynamicRenderKiloPixels":"2"
 }
 ```
-### How does its work:
+### How It Works
 
-- A lower value of `DFIntDebugDynamicRenderKiloPixels` decreases the number of kilopixels, resulting in a lower resolution and a more pixelated image.
+The value of `DFIntDebugDynamicRenderKiloPixels` determines the maximum number of kilopixels allowed for rendering. Lowering this value reduces the resolution, resulting in a more pixelated image.
+
+#### Calculation Steps:
+
+1. **Height × Width = Total Pixel Count**  
+2. **Pixel Count ÷ 1000 = Kilopixel Value**  
+3. **If the result includes a decimal, round it up to the nearest whole number.**
+
+#### Example: 1080p Resolution
+
+1. 1920 × 1080 = **2,073,600 pixels**  
+2. 2,073,600 ÷ 1000 = **2073.6 kilopixels**  
+3. Rounded up: **2074**

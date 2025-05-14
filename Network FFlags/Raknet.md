@@ -1,6 +1,6 @@
 # Increasing Data Receive from RakNet
 
-#### Adjusting RakNet Data Reception
+#### Data Receive from RakNet
 
 ```json
 {
